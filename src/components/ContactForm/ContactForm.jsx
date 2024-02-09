@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import css from "./ContactForm.module.css";
 
 class ContactForm extends Component {
     static defaultProps = { onSubmit: () => { } };
+    static propTypes = { onSubmit: PropTypes.func.isRequired };
 
     render() {
         const { onSubmit } = this.props;

@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import Contact from "components/Contact/Contact";
 
 class ContactList extends Component {
-    static defaultProps = { contacts: [], filter: "", onClick: () => {} };
+    static defaultProps = { contacts: [], filter: "", onClick: () => { } };
+    static propTypes = {
+        contacts: PropTypes.array.isRequired,
+        onClick: PropTypes.func.isRequired,
+    }
 
     render() {
         const { contacts, filter, onClick } = this.props;

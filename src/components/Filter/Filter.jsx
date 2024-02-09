@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import css from "./Filter.module.css";
 
 class Filter extends Component {
     static defaultProps = { onChange: () => { } };
+    static propTypes = { onChange: PropTypes.func.isRequired };
 
     render() {
         const { onChange } = this.props;
